@@ -1,0 +1,1 @@
+This a graphical Game implemented in Java. There's a demo video availabale
