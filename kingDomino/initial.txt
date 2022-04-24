@@ -1,1 +1,1 @@
-This a graphical Game implemented in Java. There's a demo video availabale
+This is a graphical game implemented in Java. There's a demo video availabale.
