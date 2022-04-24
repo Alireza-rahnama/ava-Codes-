@@ -1,4 +1,3 @@
-Author: AlirezaRahnama 201794073 
 
 this program applis 4 different algorithms of thresholding including three global methods such as auto, manual, and Otsu's thresholding, as well as the Adaptive Mean-C algorithm. 
 The image canvas on the left displays the input image and the right image canvas displays the image after aplying threshold on the image. 
