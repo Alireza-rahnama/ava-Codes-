@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 
 public class WindowDemo extends JFrame implements ActionListener {
-	// gui components that are contained in this frame:
+	// declared gui components that are contained in this frame:
 	private JPanel topPanel, bottomPanel; // top and bottom panels in the main window
 	private JLabel topLabel; // a text label to appear in the top panel
 	private JButton topButton; // a 'Start' button to appear in the top panel
