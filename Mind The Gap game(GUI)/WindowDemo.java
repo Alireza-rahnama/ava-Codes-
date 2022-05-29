@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 /*
  *  The main window of the gui
- *  Notice that it extends JFrame - so we can add our own components.
- *  Notice that it implements ActionListener - so we can handle user input.
+ *  it extends JFrame - so we can add our own components.
+ *  it implements ActionListener - so we can handle user input.
  * 
  *  @author aRahnama
  */
@@ -35,14 +35,14 @@ public class WindowDemo extends JFrame implements ActionListener {
 		this.x = x;
 		this.y = y;
 		this.setSize(600, 600);
-		// first create the panels
+		// first create the panels and set the layouts and styles
 		topPanel = new JPanel();
 		topPanel.setLayout(new FlowLayout());
 		bottomPanel = new JPanel();
 		bottomPanel.setLayout(new GridLayout(x, y));
 		bottomPanel.setSize(500, 500);
 
-		// then create the components for each panel and add them to it
+		// then instantiate the components for each panel
 
 		// for the top panel:
 		topLabel = new JLabel("Don't select neighbour squares! Click to begin >>");
