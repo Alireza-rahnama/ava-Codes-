@@ -23,7 +23,7 @@ public class WindowDemo extends JFrame implements ActionListener {
 	private ArrayList<String> player2Neighbours;
 
 	/*
-	 * constructor method takes as input how many rows and columns of gridsquares to
+	 * constructor method takes as input how many columns and rows of gridsquares to
 	 * create
 	 * it then creates the panels, their subcomponents and puts them all together in
 	 * the main frame
@@ -55,14 +55,14 @@ public class WindowDemo extends JFrame implements ActionListener {
 		// for the bottom panel:
 		// create the buttons and add them to the grid
 		gridSquares = new GridSquare[x][y];
-		for (int column = 0; column < x; column++) {
-			for (int row = 0; row < y; row++) {
-				gridSquares[column][row] = new GridSquare(column, row);
-				gridSquares[column][row].setSize(20,20);
-				gridSquares[column][row].setColor();
-				gridSquares[column][row].setOpaque(true); // without this line and the next the OS' default
-				gridSquares[column][row].setBorderPainted(true); // look & feel will dominate / interfere
-				bottomPanel.add(gridSquares[column][row]);
+		for (int row = 0; row < x; row++) {
+			for (int column = 0; column < y; column++) {
+				gridSquares[row][column] = new GridSquare(row, column);
+				gridSquares[row][column].setSize(20,20);
+				gridSquares[row][column].setColor();
+				gridSquares[row][column].setOpaque(true); // without this line and the next the OS' default
+				gridSquares[row][column].setBorderPainted(true); // look & feel will dominate / interfere
+				bottomPanel.add(gridSquares[row][column]);
 			}
 		}
 
@@ -77,11 +77,11 @@ public class WindowDemo extends JFrame implements ActionListener {
 	}
 
 	public void disableAction(){
-		for ( int column = 0; column < x; column ++)
+		for ( int row = 0; row < x; row ++)
 					{
-						for ( int row = 0; row < y; row ++)
+						for ( int column = 0; column < y; column ++)
 						{
-							gridSquares [column][row].removeActionListener(this);	
+							gridSquares [row][column].removeActionListener(this);	
 						}
 					}
 
@@ -142,11 +142,11 @@ public class WindowDemo extends JFrame implements ActionListener {
 				//this block of code determines the winner and disable acction listener of the instances of gridSqaures
 				if(!(((GridSquare) selected).isAccessibleToP1()) && ((GridSquare) selected).getName().equals("Player 1")){
 					topLabel.setText("Player 2 Won!");
-					for ( int column = 0; column < x; column ++)
+					for ( int row = 0; row < x; row ++)
 					{
-						for ( int row = 0; row < y; row ++)
+						for ( int column = 0; column < y; column ++)
 						{
-							gridSquares [column][row].removeActionListener(this);	
+							gridSquares [row][column].removeActionListener(this);	
 						}
 					}
 					
@@ -154,11 +154,11 @@ public class WindowDemo extends JFrame implements ActionListener {
 
 				if(!(((GridSquare) selected).isAccessibleToP2()) && ((GridSquare) selected).getName().equals("Player 2")){
 					topLabel.setText("Player 1 Won!");
-					for ( int column = 0; column < x; column ++)
+					for ( int row = 0; row < x; row ++)
 					{
-						for ( int row = 0; row < y; row ++)
+						for ( int column = 0; column < y; column ++)
 						{
-							gridSquares [column][row].removeActionListener(this);	
+							gridSquares [row][column].removeActionListener(this);	
 						}
 					}
 					
@@ -181,13 +181,13 @@ public class WindowDemo extends JFrame implements ActionListener {
 			Random rand= new Random();
 			int a= rand.nextInt(2);
 			topLabel.setText(a==0 ? "Player 1's turn..." : "Player 2's turn...");
-			for ( int column = 0; column < x; column ++)
+			for ( int row = 0; row < x; row ++)
 			{
-				for ( int row = 0; row < y; row ++)
+				for ( int column = 0; column < y; column ++)
 				{
-					gridSquares [column][row].setColor();
-					gridSquares [column][row].addActionListener(this);
-					gridSquares [column][row].setAccessible();	
+					gridSquares [row][column].setColor();
+					gridSquares [row][column].addActionListener(this);
+					gridSquares [row][column].setAccessible();	
 				}
 			}
 		}
