@@ -1,0 +1,22 @@
+How to run from a shell window:
+
+1.Open console (terminal, command.exe)
+
+2.Navigate to inside the 2005Assignment(Change directory to the folder of the source code)
+
+3.Compile the code:
+
+javac *.java
+
+4.Run the code:
+
+java Driver
+
+
+
+Game instruction:
+1.After New Game has been clicked on, the program will randomly choose which player goes first. 
+2.When the player clicks on a square, the square is highlighted in the colour of that player (Player 1 = red, Player 2 = blue). 
+3.players take turn and select squares, they should avoid selectig their neighboring squares, whichever player select its coolors' neighbouring square loses the game.
+4.you can reset the game to primary mode by selecting new game button in the top of the GUI.
+5. you can exit the game by clicking the exit icon.
