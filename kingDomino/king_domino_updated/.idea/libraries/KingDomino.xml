@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="KingDomino">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/KingDomino.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
