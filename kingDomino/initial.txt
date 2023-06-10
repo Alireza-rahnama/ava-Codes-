@@ -1,1 +1,1 @@
-This is a graphical game implemented in Java. There's a demo video availabale.
+This is a graphical game implemented in Java. There's a demo video availabale. this version is the original version and you can find the more structured code in king_domino directory.
